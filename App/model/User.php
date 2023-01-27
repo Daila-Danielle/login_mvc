@@ -1,4 +1,5 @@
 <?php
+    use Config\Conexao\Conexao;
 
     class User
     {
@@ -8,22 +9,28 @@
         private $senha;
         private $celular;
 
+        public function validateLogin()
+        {
+            $conn = Conexao::conectar();
+            var_dump($conn);
+        }
+
         public function setEmail($email)
         {
             $this->email = $email;
         }
 
-        public function setEmail($senha)
+        public function setSenha($senha)
         {
             $this->senha = $senha;
         }
 
-        public function setEmail($nome)
+        public function setNome($nome)
         {
             $this->nome = $nome;
         }
 
-        public function setEmail($celular)
+        public function setCelular($celular)
         {
             $this->celular = $celular;
         }
