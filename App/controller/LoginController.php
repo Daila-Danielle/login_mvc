@@ -14,8 +14,8 @@
             return $template->render();
         }
 
-        public function check()
+/*         public function check()
         {
             $_POST
-        }
+        } */
     }
